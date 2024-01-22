@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: "Poppins", sans-serif;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 1.5rem;
+}
+.app{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+.quiz{
+text-align: center;
+}
+.quiz h2{
+    margin-bottom: 30px;
+}
+.btn{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.appbtns{
+    display: flex;
+    justify-content: space-between;
+}
+.btn:hover:not([disabled]){
+    background-color: black;
+    color: white;
+}
+.btn:disabled{
+    cursor:no-drop;
+}
+.correct{
+    background-color: rgb(87, 233, 87);
+}
+.incorrect{
+    background-color: rgb(247, 97, 97);
+}
+#next{
+    display: none;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 10px;
+    background-color: rgb(115, 176, 255);
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+ #nextcategory, #restart, #tobeginning{
+    display: none;
+    text-align: center;
+    padding: 10px 35px;
+    border-radius: 10px;
+    background-color: rgb(44, 100, 172);
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+ }
+ #scoreresult{
+    text-align: center;
+    font-weight: 700;
+    color: green;
+    margin-bottom: 25px;
+    font-size: 18px;
+ }
+ #totalscore{
+    text-align: center;
+    font-weight: 700;
+    color: green;
+    margin-bottom: 25px;
+    font-size: 18px;
+ }
+
+.title h1{
+    color: rgb(0, 39, 90);
+    text-align: center;
+    padding-top: 2rem;
+    margin-bottom: 60px;
+    font-size: 55px;
+}
+#categorytitle{
+    margin-bottom:25px ;
+    text-align: center;
+}
+.categories{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+.categories #catg0, .categories #catg1, .categories #catg2{
+    cursor: pointer;
+    max-width: 160px;
+}
+figcaption{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+@keyframes scaleAnimation {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(0.7);
+    }
+    80%{
+        transform: scale(0.6);  
+    }
+    90%{
+        transform: scale(0.7);  
+    }
+    100% {
+      transform: scale(0.5);
+    }
+  }
+#master, #pro, #amateur{
+    animation: scaleAnimation 2s ease forwards ;
+    max-width: 200px;
+    max-height: 200px;
+}
+#totalscore{
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.attribution{
+color: rgb(90, 90, 90);
+text-align: center;
+font-weight: 700;
+}
+
+#attribution{
+    color: rgb(90, 90, 90);
+    font-weight: 700;
+}
+
+/* Media queries*/
+
+@media screen and (max-width: 880px) {
+    #nextcategory, #restart, #tobeginning{
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    #question{
+       font-size: 18px;
+    }
+    #next{
+        padding: 5px 25px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+    .btn{
+        padding: 10px;
+        border-radius: 12px;
+        font-size: 11px;
+    }
+     #scoreresult{
+        font-size: 14px;
+     }
+     #totalscore{
+        font-size: 14px;
+     }
+    
+    .title h1{
+        font-size: 35px;
+    }
+    #categorytitle{
+        font-size: 13px;
+    }
+    .categories #catg0, .categories #catg1, .categories #catg2{
+        max-width: 120px;
+    }
+    .attribution{
+    font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    #nextcategory, #restart, #tobeginning{
+        padding: 6px 7px;
+        border-radius: 5px;
+        font-size: 8px;
+    }
+    #question{
+        font-size: 14px;
+     }
+     .btn{
+         padding: 8px;
+         border-radius: 8px;
+         font-size: 9px;
+     }
+}
+    
+
+
+
+
+
+
